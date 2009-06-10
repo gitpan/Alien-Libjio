@@ -1,0 +1,92 @@
+This file contains message digests of all files listed in MANIFEST,
+signed via the Module::Signature module, version 0.55.
+
+To verify the content in this distribution, first make sure you have
+Module::Signature installed, then type:
+
+    % cpansign -v
+
+It will check each file's integrity, as well as the signature's
+validity.  If "==> Signature verified OK! <==" is not displayed,
+the distribution may already have been compromised, and you should
+not run its Makefile.PL or Build.PL.
+
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+SHA1 4dd02202d7e71e3422c63463e2bfad8b8e8e71ea Build.PL
+SHA1 7b9aa0e53f11d2a3812ff3b012f7796db13b68d4 Changes
+SHA1 2d85c2f3ede84c3340760e33c0bf742f20154c67 LICENSE
+SHA1 d8f1c089e3808c1a78e751d15190e1829a8c51f3 MANIFEST
+SHA1 c4c013dae36ac310c895e97cd7e908375a8469d7 MANIFEST.SKIP
+SHA1 3163123abe076602a84cadd11c34764fe0f04bf0 META.yml
+SHA1 7cfa2f7bdb9c7494ceb0f3260077453c41deb412 Makefile.PL
+SHA1 bf3fb7abf8dbe2d53e2548f3a92516fe1908e6f2 README
+SHA1 97a33922a9c1c15421819c404fb4dc0965b90ea8 inc/My/Builder.pm
+SHA1 ac516816953c695b05c31b6ec701195b19dc6244 lib/Alien/Libjio.pm
+SHA1 fcc1c00e4cef42336fb85f756e4bbe35d43b4dd0 libjio/INSTALL
+SHA1 2f593cf68fa5662e89bbd52376c8ea218500477e libjio/LICENSE
+SHA1 1f77d997ab0ffa30185d93e1418d50a37359e578 libjio/README
+SHA1 a31af2fdea1bdd0dcb5b0d942824fa26a61a7568 libjio/UPGRADING
+SHA1 fcfa9dca76d743224ffd8e6a92d3ba9be0aa92b4 libjio/bindings/preload/libjio_preload.c
+SHA1 594c7e3be6be3982167e87538869551c75fcdc35 libjio/bindings/python/libjio.c
+SHA1 2995679f141170702b93a70e3c38a2e86eb23694 libjio/bindings/python/setup.py
+SHA1 ddef38e0d23d00e947db70d7257d33da086b1422 libjio/doc/guide.rst
+SHA1 99ffaad2958f61b638e02a767e42df119ac26100 libjio/doc/libjio.rst
+SHA1 fae08e13c83faa2190db15a97009a8d9aa732438 libjio/doc/source_layout
+SHA1 75365431cfb3d33786d145cb393a1cc7b8eff264 libjio/doc/tids.rst
+SHA1 3a5296992daf912de7d011c2064de9e4e41520a1 libjio/libjio/ansi.c
+SHA1 7726c040baee7cd62979d7c9317dd4d03ccf3bf7 libjio/libjio/autosync.c
+SHA1 ee665b0bbb1ccfd8411c5af31bc94d618e890e01 libjio/libjio/check.c
+SHA1 db05115c9185c4e9b623656d0dd2271a1375f1f1 libjio/libjio/checksum.c
+SHA1 ba4bbf11c69cd6f4cd3e17e74062a6f7009540bd libjio/libjio/common.c
+SHA1 26e2cabdc39637a5ffda5b4f5a42ef53c6fe2c13 libjio/libjio/common.h
+SHA1 c8062d326856de324170d8baf5a0ee578996b3e5 libjio/libjio/compat.c
+SHA1 3c01adb0374b51ba7ee882e0a9cf82b4db1b63b7 libjio/libjio/compat.h
+SHA1 6eee1a34faa5093b985578702c2177909678f4e7 libjio/libjio/doxygen/Doxyfile.base
+SHA1 cd47f387f1d779631f36e0c9ac9f55e8376f3fec libjio/libjio/doxygen/Doxyfile.internal
+SHA1 655f8db0bf2e6d850011f52fa0073d1ffdeea5d4 libjio/libjio/doxygen/Doxyfile.public
+SHA1 4107c4cf2195394ee376323a313d335767126a47 libjio/libjio/doxygen/groups.doxy
+SHA1 5de5d5fd637ffe3920b9b1bce5f2306b494ff6ac libjio/libjio/fiu-local.h
+SHA1 cb224d4957e6487616e6a6af852178f2bc63bd0a libjio/libjio/jiofsck.c
+SHA1 2efa969f3dec2867a6f9917843ef95a8c3419175 libjio/libjio/journal.c
+SHA1 3453af9fbe21ff1fe209143c1c95013610bf8108 libjio/libjio/journal.h
+SHA1 3ca7db0f42a6d3cd3f1277b36b4395789a76dce6 libjio/libjio/libjio.3
+SHA1 38ea6993a0e93677ce37a312503795e1ee31cbf3 libjio/libjio/libjio.h
+SHA1 a343c50dfa92f3448f7ec8957c3f8fec943041ca libjio/libjio/libjio.skel.pc
+SHA1 18e42bacb5e6740f2ee3ad52174f62d3c751c145 libjio/libjio/trans.c
+SHA1 870aef6403b1f4c7119084bf5b9b53145cafd598 libjio/libjio/trans.h
+SHA1 fb91d70ca1e94fd2a1817f7ea7fcbad9bb30c9fe libjio/libjio/unix.c
+SHA1 686e480f9d4634106a397a0c8a44bacbdad07b86 libjio/samples/full.c
+SHA1 c98ef7262e0758d7721d56bdc49cd23dd0226b28 libjio/samples/jio1.c
+SHA1 b28a52cec024d76b708d6eeeb41c3d19c5d8f48c libjio/samples/jio2.c
+SHA1 1aba888225b7b303759fa3c5c73630449faa821c libjio/samples/jio3.c
+SHA1 ca98c95acd68d86daa2e3f44a9a127b29d1df487 libjio/tests/behaviour/README
+SHA1 aeab4e9155e775d4124d1552cfa0c333f6e3a6ed libjio/tests/behaviour/runtests
+SHA1 9351f4d2af18d4dd1a956478241ebee4af9a83c2 libjio/tests/behaviour/t_corruption.py
+SHA1 8830e17f8727b04b8fabc42fe8a4e0c39388ea56 libjio/tests/behaviour/t_fi.py
+SHA1 95d58f83ad589751389eb5749285e9fc8c79af74 libjio/tests/behaviour/t_normal.py
+SHA1 b901c6651f3ead274ab6e118acf5ebe402dd8ffc libjio/tests/behaviour/tf.py
+SHA1 b27ef8009ed1aab87a5722383adf0bdc034b394e libjio/tests/performance/performance.c
+SHA1 4acde6a0a88345ddac46b16a51e21d57c877a770 libjio/tests/performance/random.c
+SHA1 ae2cd57ff5a3a72033401b2672dfe2c0bbddc386 libjio/tests/stress/jiostress
+SHA1 911177d495eba7a16e6fdd80314005e2d2da9079 t/00signature.t
+SHA1 3af65c518f1b80f3b353393b17a503d3ab3d578e t/01compile.t
+SHA1 3a6791ccd3a51ec93eed79bd1010c48d81f4ac41 t/01critic.rc
+SHA1 93c1ed2dc2ee84ebd8509ccf8e6674c80d13fc1d t/01critic.t
+SHA1 d1e43b02d4ed769021566afde11c9ac82a44762b t/01kwalitee.t
+SHA1 3f31f9decaf3224aebe2b1ebfc4e29fc0958be8a t/01manifest.t
+SHA1 f0dae6e90ac1e96826444c33b5b0f3c0ad7c3f6d t/01meta.t
+SHA1 b31f25c3de62dd65627895aaf7fbf5f5b3936561 t/01min-perl.t
+SHA1 26ba3e62c739f9970c472a069600e90a40ce808e t/01pod-coverage.t
+SHA1 4f0cd73d5d677aa4dbb1451080a91c0c2fa251bc t/01pod.t
+SHA1 248cd8402b83e0152d345a04b97b5c1344cbb88b t/01portability.t
+SHA1 597bb90455fed32e4a75d6c2b9510a0849328185 t/02core.t
+SHA1 9be799364a3e294d7e48521f61182e0f5adffa7d t/03exceptions.t
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.9 (GNU/Linux)
+
+iEYEARECAAYFAkovMEcACgkQYYN9T93mai/lPgCePnEoX5n6mD/XFNMUNitVPrI2
+3mIAnA13f+tuAPolWn6dqo9EHULtOb2L
+=74P0
+-----END PGP SIGNATURE-----

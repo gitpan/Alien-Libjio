@@ -1,0 +1,125 @@
+2009-06-10  Jonathan Yu <frequency@cpan.org>
+
+	- Fixes to dependencies (Build.PL, META.yml)
+	- Added code to handle extra installs if people want (stuff like the Python/Ruby bindings, etc.) rather than just the core libjio stuff
+
+2009-06-09  Jonathan Yu <frequency@cpan.org>
+
+	Changed the defined() test to can()
+
+2009-06-09  Jonathan Yu <frequency@cpan.org>
+
+	Very minor variable name oops
+
+2009-06-09  Jonathan Yu <frequency@cpan.org>
+
+	Added a few more tests to improve coverage
+
+2009-06-09  Jonathan Yu <frequency@cpan.org>
+
+	Added some core tests. Reflected t/02core.t and t/03exceptions.t in MANIFEST
+
+2009-06-09  Jonathan Yu <frequency@cpan.org>
+
+	Added feature to check that ldflags and cflags croak when called as a class method
+
+2009-06-09  Jonathan Yu <frequency@cpan.org>
+
+	Add basic exception tests
+
+2009-06-09  Jonathan Yu <frequency@cpan.org>
+
+	- Silenced some nonsensical Perl::Critic warnings
+
+2009-06-09  Jonathan Yu <frequency@cpan.org>
+
+	Fixed minor issue making ->installed set to true unexpectedly (did not check both definedness and length of string)
+
+2009-06-09  Jonathan Yu <frequency@cpan.org>
+
+	- Removed the exception when libjio isn't found -- that's what ->installed is for
+
+2009-06-09  Jonathan Yu <frequency@cpan.org>
+
+	- Set 'installed' property to 0 by default, so that the test will return false
+
+2009-06-09  Jonathan Yu <frequency@cpan.org>
+
+	Added code to trap warnings emitted by ExtUtils::Liblist when libjio isn't found
+
+2009-06-09  Jonathan Yu <frequency@cpan.org>
+
+	- Fixed error checking code (open3 is strange to work with...)
+	- Make sure open3 children are reaped
+
+2009-06-09  Jonathan Yu <frequency@cpan.org>
+
+	- Added some error checking code
+
+2009-06-09  Jonathan Yu <frequency@cpan.org>
+
+	Unfortunately, it looks like ExtUtils::PkgConfig doesn't deal too well with errors.
+
+2009-06-09  Jonathan Yu <frequency@cpan.org>
+
+	Fixed minor oops
+
+2009-06-09  Jonathan Yu <frequency@cpan.org>
+
+	Added a subclass to install libjio
+
+2009-06-09  Jonathan Yu <frequency@cpan.org>
+
+	- Remember to 'use' ExtUtils::PkgConfig
+	- Add code to install libjio during Build.PL
+
+2009-06-09  Jonathan Yu <frequency@cpan.org>
+
+	Added a basic META.yml
+
+2009-06-09  Jonathan Yu <frequency@cpan.org>
+
+	- Suppress a warning from perlcritic
+	- Work with getconf using open3 rather than backticks
+
+2009-06-09  Jonathan Yu <frequency@cpan.org>
+
+	- Used ExtUtils::PkgConfig instead of doing stuff by hand
+
+2009-06-09  Jonathan Yu <frequency@cpan.org>
+
+	- Fixed name (IO::Journal -> Alien::Libjio)
+	- Updated MANIFEST with Perl::Critic stuff
+
+2009-06-09  Jonathan Yu <frequency@cpan.org>
+
+	Added Perl::Critic test
+
+2009-06-09  Jonathan Yu <frequency@cpan.org>
+
+	Updated MANIFEST
+
+2009-06-09  Jonathan Yu <frequency@cpan.org>
+
+	Added some basic tests
+
+2009-06-09  Jonathan Yu <frequency@cpan.org>
+
+	Minor oops fixes
+
+2009-06-09  Jonathan Yu <frequency@cpan.org>
+
+	- Added flag detection using Alien::Libjio
+	- Added accessor methods for ldflags & cflags
+
+2009-06-09  Jonathan Yu <frequency@cpan.org>
+
+	Initial commit :-)
+
+2009-06-09  Jonathan Yu <frequency@cpan.org>
+
+	Added Alien-Libjio directory
+
+;; Local Variables:
+;; coding: utf-8
+;; End:
