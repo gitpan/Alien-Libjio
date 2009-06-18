@@ -5,7 +5,7 @@
 #
 # By Jonathan Yu <frequency@cpan.org>, 2009. All rights reversed.
 #
-# $Id: 01portability.t 6040 2009-04-07 00:25:30Z FREQUENCY@cpan.org $
+# $Id: 01portability.t 7532 2009-06-14 17:35:00Z FREQUENCY@cpan.org $
 #
 # This package and its contents are released by the author into the Public
 # Domain, to the full extent permissible by law. For additional information,
@@ -37,7 +37,7 @@ options(
   test_dir_noext      => 1,
   test_dos_length     => 0,
   test_mac_length     => 1,
-  test_one_dot        => 1,
+  test_one_dot        => 0,
   test_space          => 1,
   test_special_chars  => 1,
   test_symlink        => 1,

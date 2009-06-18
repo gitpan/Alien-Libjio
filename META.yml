@@ -1,16 +1,16 @@
 ---
 name: Alien-Libjio
-version: 1.000000
+version: 1.000001
 author:
   - 'Jonathan Yu <frequency@cpan.org>'
-abstract: Perl package to install libjio (Journalled I/O library)
+abstract: Installing and finding libjio (Journalled I/O library)
 license: unrestricted
 requires:
   Carp: 1.04
   ExtUtils::Liblist: 0
   perl: 5.006
   strict: 0
-  version: 0.76
+  version: 0.74
   warnings: 0
   IPC::Open3: 0
   Cwd: 0
@@ -34,7 +34,7 @@ dynamic_config: 1
 provides:
   Alien::Libjio:
     file: lib/Alien/Libjio.pm
-    version: 1.000000
+    version: 1.000001
 generated_by: Module::Build version 0.3
 meta-spec:
   url: http://module-build.sourceforge.net/META-spec-v1.2.html

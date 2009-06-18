@@ -3,7 +3,7 @@
 # t/02core.t
 #  Tests core functionality
 #
-# $Id: 03core.t 7088 2009-05-15 02:51:39Z FREQUENCY@cpan.org $
+# $Id: 02core.t 7496 2009-06-13 04:17:20Z FREQUENCY@cpan.org $
 #
 # This package and its contents are released by the author into the Public
 # Domain, to the full extent permissible by law. For additional information,
@@ -12,7 +12,7 @@
 use strict;
 use warnings;
 
-use Test::More tests => 9;
+use Test::More tests => 10;
 use Test::NoWarnings;
 
 use Alien::Libjio;
@@ -24,14 +24,18 @@ can_ok($obj, 'version');
 
 # These sets of tests depend on whether libjio is installed
 SKIP: {
-  skip 'tests for when libjio is installed', 4 unless $obj->installed;
+  skip('tests for when libjio is installed', 5) unless $obj->installed;
 
-  # We have to make sure to test the ExtUtils::Liblist method
-  $obj->_try_liblist();
+  # If we got our config from pkg-config, do it again with ExtUtils::Liblist
+  # so we can test that method too.
+  $obj->_try_liblist() if $obj->how eq 'ExtUtils::Liblist';
+
+  # Now that we've done liblist, our method should be 'ExtUtils::Liblist'
+  is($obj->method, 'ExtUtils::Liblist', 'Detection method is correct');
 
   # Everything should still be defined
-  ok(ref $obj->cflags eq 'ARRAY', '->cflags returns an ARRAY ref');
-  ok(ref $obj->ldflags eq 'ARRAY', '->ldflags returns an ARRAY ref');
+  is(ref $obj->cflags,  'ARRAY', '->cflags returns an ARRAY ref');
+  is(ref $obj->ldflags, 'ARRAY', '->ldflags returns an ARRAY ref');
 
   # Returns an array if calling in list context
   my @a = $obj->cflags;
@@ -42,7 +46,7 @@ SKIP: {
 
 # Make sure the returned values are false
 SKIP: {
-  skip 'tests for when libjio is not installed', 2 if $obj->installed;
+  skip('tests for when libjio is not installed', 2) if $obj->installed;
 
   ok(!$obj->cflags, '->cflags is false');
   ok(!$obj->ldflags, '->ldflags is false');

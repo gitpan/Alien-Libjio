@@ -1,3 +1,73 @@
+2009-06-18  Jonathan Yu <frequency@cpan.org>
+
+	Bumped to version 1.0.1
+
+2009-06-14  Jonathan Yu <frequency@cpan.org>
+
+	No longer enforce "one dot only" in filenames. This breaks compatibility with OpenVMS.
+
+2009-06-14  Jonathan Yu <frequency@cpan.org>
+
+	Updated perlcriticrc with new preferences, removed "no critic" stuff for those in Alien/Libjio.pm
+
+2009-06-14  Jonathan Yu <frequency@cpan.org>
+
+	- Added limitation warnings
+	- Other minor documentation fixes
+
+2009-06-13  Jonathan Yu <frequency@cpan.org>
+
+	- A safer ENV{PATH}
+	- Don't do ExtUtils::Liblist twice in t/02core.t
+
+2009-06-12  Jonathan Yu <frequency@cpan.org>
+
+	Scalar context doesn't do what it usually does; we should consider returning a string containing all flags (join'd)...
+
+2009-06-12  Jonathan Yu <frequency@cpan.org>
+
+	Fix skipped test count
+
+2009-06-12  Jonathan Yu <frequency@cpan.org>
+
+	Added an example, more tests, updated MANIFEST
+
+2009-06-12  Jonathan Yu <frequency@cpan.org>
+
+	Added libjio compiled files to MANIFEST.SKIP
+
+2009-06-12  Jonathan Yu <frequency@cpan.org>
+
+	Skip 3 tests inside SKIP block
+
+2009-06-12  Jonathan Yu <frequency@cpan.org>
+
+	Added t/00build.t - I'm still not sure what's causing the Kwalitee test failures though
+
+2009-06-12  Jonathan Yu <frequency@cpan.org>
+
+	Added more stuff to make sure the module build successfully
+
+2009-06-12  Jonathan Yu <frequency@cpan.org>
+
+	- The version dependency can be reverted to 0.74
+	- Better detection with $ENV{MAKE} etc
+
+2009-06-12  Jonathan Yu <frequency@cpan.org>
+
+	Make sure we tried to build libjio before failing :-)
+
+2009-06-12  Jonathan Yu <frequency@cpan.org>
+
+	- Update README
+	- Added t/00build.t test to make sure the build process completed successfully, or fail otherwise (this way we can see which libjio instances fail to build from source, via CPAN Testers)
+
+2009-06-10  Jonathan Yu <frequency@cpan.org>
+
+	Changed the abstract
+
+2009-06-10  Jonathan Yu <frequency@cpan.org>
+
 2009-06-10  Jonathan Yu <frequency@cpan.org>
 
 	- Fixes to dependencies (Build.PL, META.yml)

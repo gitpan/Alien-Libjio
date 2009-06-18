@@ -3,7 +3,7 @@
 # Build.PL
 #  Script to build and install this distribution
 #
-# $Id: Build.PL 7351 2009-06-02 14:20:21Z FREQUENCY@cpan.org $
+# $Id: Build.PL 7484 2009-06-12 23:15:25Z FREQUENCY@cpan.org $
 #
 # This package and its contents are released by the author into the Public
 # Domain, to the full extent permissible by law. For additional information,
@@ -34,7 +34,7 @@ my $builder = My::Builder->new(
 
     # Pragmatic and special modules
     'Carp'              => 1.04,
-    'version'           => 0.76,
+    'version'           => 0.74,
     'warnings'          => 0,
     'strict'            => 0,
 
@@ -99,7 +99,7 @@ unless ($jio->installed) {
 
   # Ask the user what 'make' program to invoke
   my $make;
-  if ($ENV{MAKE}) {
+  if (exists($ENV{MAKE}) && length($ENV{MAKE})) {
     $make = $ENV{MAKE};
   }
   else {

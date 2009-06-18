@@ -1,7 +1,7 @@
 # Alien::Libjio
 #  A Perl package to install libjio, a library for Journalled I/O.
 #
-# $Id: ISAAC.pm 7057 2009-05-12 22:51:01Z FREQUENCY@cpan.org $
+# $Id: Libjio.pm 7620 2009-06-18 20:57:43Z FREQUENCY@cpan.org $
 #
 # By Jonathan Yu <frequency@cpan.org>, 2009. All rights reversed.
 #
@@ -17,15 +17,15 @@ use Carp ();
 
 =head1 NAME
 
-Alien::Libjio - Perl package to install libjio (Journalled I/O library)
+Alien::Libjio - Installing and finding libjio (Journalled I/O library)
 
 =head1 VERSION
 
-Version 1.0 ($Id: ISAAC.pm 7057 2009-05-12 22:51:01Z FREQUENCY@cpan.org $)
+Version 1.0.1 ($Id: Libjio.pm 7620 2009-06-18 20:57:43Z FREQUENCY@cpan.org $)
 
 =cut
 
-use version; our $VERSION = qv('1.0');
+use version; our $VERSION = qv('1.0.1');
 
 =head1 DESCRIPTION
 
@@ -103,7 +103,8 @@ sub new {
 
   $self->_try_pkg_config()
     or $self->_try_liblist()
-    ;
+    or delete($self->{method});
+
   return $self;
 }
 
@@ -148,6 +149,7 @@ sub version {
 }
 
 =head2 $jio->ldflags
+
 =head2 $jio->linker_flags
 
 This returns the flags required to link C code with the local installation of
@@ -186,6 +188,7 @@ sub ldflags {
 *linker_flags = *ldflags;
 
 =head2 $jio->cflags
+
 =head2 $jio->compiler_flags
 
 This method returns the compiler option flags to compile C code which uses
@@ -217,6 +220,42 @@ sub cflags {
 }
 *compiler_flags = *cflags;
 
+=head2 $jio->method
+
+=head2 $jio->how
+
+This method returns the method the module used to find information about
+libjio. The following methods are currently used (in priority order):
+
+=over
+
+=item *
+
+pkg-config: the de-facto package information tool
+
+=item *
+
+ExtUtils::Liblist: a utility module used by ExtUtils::MakeMaker
+
+=back
+
+Example code:
+
+  if ($jio->installed) {
+    print 'I found this information using: ', $jio->how, "\n";
+  }
+
+=cut
+
+sub method {
+  my ($self) = @_;
+
+  Carp::croak('You must call this method as an object') unless ref($self);
+
+  return $self->{method};
+}
+*how = *method;
+
 # Private methods to find & fill out information
 
 use IPC::Open3 ('open3');
@@ -225,8 +264,6 @@ sub _get_pc {
   my ($key) = @_;
 
   my $read;
-  # This string doesn't look all *too* noisy for me
-  ## no critic(ProhibitNoisyQuotes)
   my $pid = open3(undef, $read, undef, 'pkg-config', 'libjio', '--' . $key);
   # We're using blocking wait, so the return value doesn't matter
   ## no critic(RequireCheckedSyscalls)
@@ -251,10 +288,9 @@ sub _try_pkg_config {
   }
 
   $self->{installed} = 1;
+  $self->{method} = 'pkg-config';
 
   # pkg-config returns things with a newline, so remember to remove it
-  # I don't see anything wrong with the ' ' (pure whitespace quotes)
-  ## no critic(ProhibitEmptyQuotes)
   $self->{cflags} = [ split(' ', $value) ];
   $self->{ldflags} = [ split(' ', _get_pc('libs')) ];
   $self->{version} = _get_pc('modversion');
@@ -272,6 +308,7 @@ sub _try_liblist {
   return unless (defined($ldflags) && length($ldflags));
 
   $self->{installed} = 1;
+  $self->{method} = 'ExtUtils::Liblist';
 
   # Empty out cflags; initialize it
   $self->{cflags} = [];
@@ -286,7 +323,6 @@ sub _try_liblist {
   # Check the status code
   if (($? >> 8) == 0) {
     # This only takes the first line
-    ## no critic(ProhibitEmptyQuotes)
     push(@{ $self->{cflags} }, split(' ', <$read>));
   }
   else {
@@ -400,7 +436,7 @@ L<IO::Journal>, a Perl module that provides an interface to libjio.
 L<App::Info::Lib::Jio>, a package that gets information about libjio.
 
 L<http://blitiri.com.ar/p/libjio/>, Alberto Bertogli's page about libjio,
-which explains the purpose and featuers of libjio.
+which explains the purpose and features of libjio.
 
 =head1 CAVEATS
 
@@ -419,6 +455,20 @@ It does try to use B<pkg-config> and B<ExtUtils::Liblist> to find a libjio
 installation on your system, but it cannot predict where files might have
 been installed. As a result, this package might install a duplicate copy
 of libjio.
+
+=item  *
+
+There is currently no way to save a custom library installation path for
+libjio. This is likely to change in the future.
+
+=item *
+
+B<pkg-config> may fail if you have an insecure $ENV{PATH} variable. Due to
+the way IPC::Open3 works, taintedness exceptions are suppressed and pkg-config
+seems to fail for no reason. The recommended fix for this is to use a module
+like L<Env::Sanctify::Auto> or to otherwise clean up the calling environment.
+Another workaround is to disable taint checking, but that's not recommended.
+(See: L<http://rt.perl.org/rt3/Ticket/Display.html?id=66572>)
 
 =back
 

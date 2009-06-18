@@ -1,11 +1,11 @@
 #!/usr/bin/perl -T
 
-# t/05exceptions.t
+# t/03exceptions.t
 #  Tests fast errors produced with obvious mistakes
 #
 # By Jonathan Yu <frequency@cpan.org>, 2009. All rights reversed.
 #
-# $Id: 05exceptions.t 5758 2009-03-25 20:59:40Z FREQUENCY@cpan.org $
+# $Id: 03exceptions.t 7526 2009-06-14 16:50:50Z FREQUENCY@cpan.org $
 #
 # This package and its contents are released by the author into the Public
 # Domain, to the full extent permissible by law. For additional information,

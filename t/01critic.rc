@@ -1,10 +1,10 @@
 # Perl::Critic resource file
 #
-# $Id: 01critic.rc 5715 2009-03-20 14:22:51Z FREQUENCY@cpan.org $
+# $Id: 01critic.rc 7531 2009-06-14 17:06:50Z FREQUENCY@cpan.org $
 #
 # By Jonathan Yu <frequency@cpan.org>, 2009. All rights reversed.
 #
-# $Id: 01critic.rc 5715 2009-03-20 14:22:51Z FREQUENCY@cpan.org $
+# $Id: 01critic.rc 7531 2009-06-14 17:06:50Z FREQUENCY@cpan.org $
 #
 # This package and its contents are released by the author into the
 # Public Domain, to the full extent permissible by law. For additional
@@ -53,6 +53,14 @@ allow_leading_tabs = 0
 # Magic numbers are bad, but I'm trusting myself to document them
 # appropriately (unless, of course, they are obvious)
 [-ValuesAndExpressions::ProhibitMagicNumbers]
+
+# Most detected quotes don't look all that noisy, and I'm trusting myself to
+# change to q{} if it is clearer.
+[-ValuesAndExpressions::ProhibitNoisyQuotes]
+
+# I often use empty quotes and don't want to litter my namespace with new
+# symbols (like $SPACE) for little to no gain.
+[-ValuesAndExpressions::ProhibitEmptyQuotes]
 
 ###################################################
 ############### DOCUMENTATION

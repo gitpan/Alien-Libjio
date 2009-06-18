@@ -1,7 +1,7 @@
 # My::Builder
 #  A local Module::Build subclass for installing libjio
 #
-# $Id: ISAAC.pm 7057 2009-05-12 22:51:01Z FREQUENCY@cpan.org $
+# $Id: Builder.pm 7526 2009-06-14 16:50:50Z FREQUENCY@cpan.org $
 #
 # By Jonathan Yu <frequency@cpan.org>, 2009. All rights reversed.
 #
@@ -14,8 +14,7 @@ package My::Builder;
 use strict;
 use warnings;
 
-use Module::Build;
-our @ISA = ('Module::Build');
+use base 'Module::Build';
 
 use Config '%Config';
 
@@ -48,9 +47,14 @@ sub ACTION_code {
       _chdir_or_die(File::Spec->catfile('libjio', 'libjio'));
     }
 
-    # Run the make system to do the rest
-    $rc = (system($self->notes('make')) == 0) ? 1 : 0;
+    # Run the make system to do the rest, but save the return code
+    system($self->notes('make'));
+    $rc = $? >> 8;
+
+    # Make sure we change the directory back before adding notes, or they
+    # won't persist (in _build state)
     _chdir_back();
+    $self->notes(build_result => $rc);
   }
 
   return $rc;
