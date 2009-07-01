@@ -14,24 +14,24 @@ not run its Makefile.PL or Build.PL.
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-SHA1 7c9c7e4a3737ede5376641c0d65861a49c7b1310 Build.PL
-SHA1 a7eda0e98f0e385402d5b237f685e9a40ba47613 Changes
+SHA1 2dfdd0e889d9a1a53e97238e69cb7928948c5826 Build.PL
+SHA1 03d6bc36c9a2dafddacf954f9c663e9d6e0aad12 Changes
 SHA1 0e9cf419be1127b716c3fa1caa88bf0d76afab22 LICENSE
 SHA1 c39f1e9ff5ef7d87494ccd55e1c06ed20ec3c25e MANIFEST
 SHA1 a4d08584f859b5abf3613d88b20909bd1011fa03 MANIFEST.SKIP
-SHA1 c6664d0a935b8a9d382078ff0d1113fa0703177e META.yml
+SHA1 01c4805feb391b5653f66ce7d1eb22a21c7dc740 META.yml
 SHA1 7cfa2f7bdb9c7494ceb0f3260077453c41deb412 Makefile.PL
 SHA1 fc7fc8f2bedcabb9bab3f4758256fbbddffe1696 README
 SHA1 bc906d1bc284b48e2a3235bcf6c08648b4f72305 examples/libjio-config
 SHA1 6e74666b63101e3549fbb7a0d1cf4bd478d55f33 inc/My/Builder.pm
-SHA1 13c11065f581dd1d71c191ebc56234226218b30e lib/Alien/Libjio.pm
+SHA1 7f2b09237d281040c2df2378928142bcd5ebabea lib/Alien/Libjio.pm
 SHA1 fcc1c00e4cef42336fb85f756e4bbe35d43b4dd0 libjio/INSTALL
 SHA1 2f593cf68fa5662e89bbd52376c8ea218500477e libjio/LICENSE
 SHA1 1f77d997ab0ffa30185d93e1418d50a37359e578 libjio/README
 SHA1 a31af2fdea1bdd0dcb5b0d942824fa26a61a7568 libjio/UPGRADING
 SHA1 fcfa9dca76d743224ffd8e6a92d3ba9be0aa92b4 libjio/bindings/preload/libjio_preload.c
 SHA1 594c7e3be6be3982167e87538869551c75fcdc35 libjio/bindings/python/libjio.c
-SHA1 2995679f141170702b93a70e3c38a2e86eb23694 libjio/bindings/python/setup.py
+SHA1 7e554fd295e43008ce0ac257880d30001952a5ad libjio/bindings/python/setup.py
 SHA1 ddef38e0d23d00e947db70d7257d33da086b1422 libjio/doc/guide.rst
 SHA1 99ffaad2958f61b638e02a767e42df119ac26100 libjio/doc/libjio.rst
 SHA1 fae08e13c83faa2190db15a97009a8d9aa732438 libjio/doc/source_layout
@@ -42,19 +42,19 @@ SHA1 ee665b0bbb1ccfd8411c5af31bc94d618e890e01 libjio/libjio/check.c
 SHA1 db05115c9185c4e9b623656d0dd2271a1375f1f1 libjio/libjio/checksum.c
 SHA1 ba4bbf11c69cd6f4cd3e17e74062a6f7009540bd libjio/libjio/common.c
 SHA1 26e2cabdc39637a5ffda5b4f5a42ef53c6fe2c13 libjio/libjio/common.h
-SHA1 c8062d326856de324170d8baf5a0ee578996b3e5 libjio/libjio/compat.c
-SHA1 3c01adb0374b51ba7ee882e0a9cf82b4db1b63b7 libjio/libjio/compat.h
-SHA1 6eee1a34faa5093b985578702c2177909678f4e7 libjio/libjio/doxygen/Doxyfile.base
+SHA1 74b3a21c383e662f1d8c629f93eefad338dabb9d libjio/libjio/compat.c
+SHA1 b0e786001782a3c776f9e8982e14d256367463a9 libjio/libjio/compat.h
+SHA1 45661ff01483ce588137462f95b4c0c04296c334 libjio/libjio/doxygen/Doxyfile.base
 SHA1 cd47f387f1d779631f36e0c9ac9f55e8376f3fec libjio/libjio/doxygen/Doxyfile.internal
 SHA1 655f8db0bf2e6d850011f52fa0073d1ffdeea5d4 libjio/libjio/doxygen/Doxyfile.public
 SHA1 4107c4cf2195394ee376323a313d335767126a47 libjio/libjio/doxygen/groups.doxy
 SHA1 5de5d5fd637ffe3920b9b1bce5f2306b494ff6ac libjio/libjio/fiu-local.h
 SHA1 cb224d4957e6487616e6a6af852178f2bc63bd0a libjio/libjio/jiofsck.c
-SHA1 2efa969f3dec2867a6f9917843ef95a8c3419175 libjio/libjio/journal.c
+SHA1 3ad732dffa920e27cd52fe64922fbfc0fb908cad libjio/libjio/journal.c
 SHA1 3453af9fbe21ff1fe209143c1c95013610bf8108 libjio/libjio/journal.h
 SHA1 3ca7db0f42a6d3cd3f1277b36b4395789a76dce6 libjio/libjio/libjio.3
 SHA1 38ea6993a0e93677ce37a312503795e1ee31cbf3 libjio/libjio/libjio.h
-SHA1 a343c50dfa92f3448f7ec8957c3f8fec943041ca libjio/libjio/libjio.skel.pc
+SHA1 cdc21adccbc372f7d7bb329ba5e9b01fb3c6d18e libjio/libjio/libjio.skel.pc
 SHA1 18e42bacb5e6740f2ee3ad52174f62d3c751c145 libjio/libjio/trans.c
 SHA1 870aef6403b1f4c7119084bf5b9b53145cafd598 libjio/libjio/trans.h
 SHA1 fb91d70ca1e94fd2a1817f7ea7fcbad9bb30c9fe libjio/libjio/unix.c
@@ -83,12 +83,12 @@ SHA1 e1a30e42a8a2318512ce60140b212afed862ab73 t/01min-perl.t
 SHA1 af626eb9f31b9ae341e13a7ed5bded900317c83d t/01pod-coverage.t
 SHA1 a0e11c8aaf9ef7c509b6af0ff2f4d41cea8beef4 t/01pod.t
 SHA1 eec754d03fe69481e7fe151fd06ca938404c4114 t/01portability.t
-SHA1 b32767536ea0375b36e334954c31c327459b5e7d t/02core.t
+SHA1 74a8f3e39c94e91d870933051fbcd826e13b9318 t/02core.t
 SHA1 f9298f867f484048c4f72eeda885b94a6065b789 t/03exceptions.t
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.9 (GNU/Linux)
 
-iEYEARECAAYFAko6cicACgkQYYN9T93mai/C8wCeLxmZpWijCEefos5hQjErgsji
-sZoAmQE7eJ6V8++Q/fGhplqXI1TUrxNJ
-=WYmN
+iEYEARECAAYFAkpLjDUACgkQYYN9T93mai8fHACbB4LiEfSQ47nyZ7S+T9qti4cq
+RZcAnRYaEaqXnB5HEbcXR4ClNn0+QAmY
+=CteH
 -----END PGP SIGNATURE-----

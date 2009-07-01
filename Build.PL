@@ -3,7 +3,7 @@
 # Build.PL
 #  Script to build and install this distribution
 #
-# $Id: Build.PL 7484 2009-06-12 23:15:25Z FREQUENCY@cpan.org $
+# $Id: Build.PL 7812 2009-07-01 19:53:59Z FREQUENCY@cpan.org $
 #
 # This package and its contents are released by the author into the Public
 # Domain, to the full extent permissible by law. For additional information,
@@ -105,6 +105,20 @@ unless ($jio->installed) {
   else {
     use Config '%Config';
     $make = $Config{make};
+
+    # Probe for GNU Make (useful on BSD/Unix variants)
+    if ($make eq 'make') {
+      `which gmake`;
+
+      # Check the return status is okay
+      if (!($? & 127) && ($? >> 8) == 0) {
+        $make = 'gmake';
+      }
+      elsif ($^O =~ /bsd$/) {
+        print {*STDERR} "warning: your system is a BSD variant but gmake " .
+          "wasn't found.\n";
+      }
+    }
   }
   $make = $builder->prompt('What is your system "make" command?', $make);
 
@@ -112,7 +126,7 @@ unless ($jio->installed) {
 
   # Figure out if we should do a full install
   my $extra = $builder->y_n('libjio includes other files including Python ' .
-    'and Ruby bindings. Install them too?', 'n');
+    'bindings. Install them too?', 'n');
   $builder->notes(extra => $extra);
 }
 

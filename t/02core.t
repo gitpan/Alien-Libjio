@@ -1,9 +1,9 @@
-#!/usr/bin/perl -T
+#!/usr/bin/perl
 
 # t/02core.t
 #  Tests core functionality
 #
-# $Id: 02core.t 7496 2009-06-13 04:17:20Z FREQUENCY@cpan.org $
+# $Id: 02core.t 7813 2009-07-01 20:16:31Z FREQUENCY@cpan.org $
 #
 # This package and its contents are released by the author into the Public
 # Domain, to the full extent permissible by law. For additional information,
