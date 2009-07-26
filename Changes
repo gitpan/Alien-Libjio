@@ -1,3 +1,22 @@
+2009-07-25  Jonathan Yu <frequency@cpan.org>
+
+	- Changed the method of probing @PATH for gmake, now we don't need to execute which
+	- Bumped version number to 1.0.3
+
+2009-07-25  Jonathan Yu <frequency@cpan.org>
+
+	Added (awful) coverage information.
+
+2009-07-25  Jonathan Yu <frequency@cpan.org>
+
+	- Added some commands so that the void context paths are touched (increases coverage a bit)
+
+2009-07-25  Jonathan Yu <frequency@cpan.org>
+
+	- Various POD updates
+	- Overhaul test scripts, remove author tests from Recommends (Alias' journal #5375)
+	- Update LICENSE and README (no longer generate a readme, just use a simple one)
+
 2009-07-01  Jonathan Yu <frequency@cpan.org>
 
 	Revert the change to 02core.t which makes Env::Sanctify::Auto necessary, and remove taint checking for that test

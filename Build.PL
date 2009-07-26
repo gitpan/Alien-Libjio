@@ -3,11 +3,7 @@
 # Build.PL
 #  Script to build and install this distribution
 #
-# $Id: Build.PL 7812 2009-07-01 19:53:59Z FREQUENCY@cpan.org $
-#
-# This package and its contents are released by the author into the Public
-# Domain, to the full extent permissible by law. For additional information,
-# please see the included `LICENSE' file.
+# $Id: Build.PL 8231 2009-07-26 02:00:44Z FREQUENCY@cpan.org $
 
 use strict;
 use warnings;
@@ -15,13 +11,15 @@ use warnings;
 use lib 'inc';
 use My::Builder;
 
+use Env '@PATH';
+
 my $builder = My::Builder->new(
   module_name           => 'Alien::Libjio',
   license               => 'unrestricted',
   dist_author           => 'Jonathan Yu <frequency@cpan.org>',
   dist_version_from     => 'lib/Alien/Libjio.pm',
   dynamic_config        => 1,
-  create_readme         => 1,
+  create_readme         => 0,
   recursive_test_files  => 1,
   sign                  => 1,
   create_packlist       => 1,
@@ -34,7 +32,7 @@ my $builder = My::Builder->new(
 
     # Pragmatic and special modules
     'Carp'              => 1.04,
-    'version'           => 0.74,
+    'version'           => 0,
     'warnings'          => 0,
     'strict'            => 0,
 
@@ -53,17 +51,6 @@ my $builder = My::Builder->new(
     'ExtUtils::CBuilder'      => 0,
   },
   recommends => {
-    # Author tests
-    'Test::Perl::Critic'            => 1.01,
-    'Perl::Critic'                  => 1.096,
-    'Test::YAML::Meta'              => 0.11,
-    'Test::Kwalitee'                => 1.01,
-    'Test::Signature'               => 1.10,
-    'Test::Pod'                     => 1.14,
-    'Test::Pod::Coverage'           => 1.04,
-    'Test::Portability::Files'      => 0.05,
-    'Test::MinimumVersion'          => 0.008,
-    'Test::DistManifest'            => 1.001002,
   },
   conflicts => {
   },
@@ -107,16 +94,11 @@ unless ($jio->installed) {
     $make = $Config{make};
 
     # Probe for GNU Make (useful on BSD/Unix variants)
-    if ($make eq 'make') {
-      `which gmake`;
-
-      # Check the return status is okay
-      if (!($? & 127) && ($? >> 8) == 0) {
-        $make = 'gmake';
-      }
-      elsif ($^O =~ /bsd$/) {
-        print {*STDERR} "warning: your system is a BSD variant but gmake " .
-          "wasn't found.\n";
+    if ($make eq 'make' && grep { -x $_ . '/gmake' } @PATH) {
+      $make = 'gmake';
+      if ($^O =~ /bsd$/) {
+        print {*STDERR} "warning: your system is a BSD variant but " .
+          "gmake wasn't found.\n";
       }
     }
   }

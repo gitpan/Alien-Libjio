@@ -3,13 +3,7 @@
 # t/01compile.t
 #  Check that the module can be compiled and loaded properly.
 #
-# By Jonathan Yu <frequency@cpan.org>, 2009. All rights reversed.
-#
-# $Id: 01compile.t 7455 2009-06-10 13:25:37Z FREQUENCY@cpan.org $
-#
-# This package and its contents are released by the author into the Public
-# Domain, to the full extent permissible by law. For additional information,
-# please see the included `LICENSE' file.
+# $Id: 01compile.t 8228 2009-07-26 00:55:52Z FREQUENCY@cpan.org $
 
 use strict;
 use warnings;

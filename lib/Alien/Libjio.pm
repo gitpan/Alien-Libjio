@@ -1,13 +1,7 @@
 # Alien::Libjio
 #  A Perl package to install libjio, a library for Journalled I/O.
 #
-# $Id: Libjio.pm 7812 2009-07-01 19:53:59Z FREQUENCY@cpan.org $
-#
-# By Jonathan Yu <frequency@cpan.org>, 2009. All rights reversed.
-#
-# This package and its contents are released by the author into the Public
-# Domain, to the full extent permissible by law. For additional information,
-# please see the included `LICENSE' file.
+# $Id: Libjio.pm 8231 2009-07-26 02:00:44Z FREQUENCY@cpan.org $
 
 package Alien::Libjio;
 
@@ -17,15 +11,15 @@ use Carp ();
 
 =head1 NAME
 
-Alien::Libjio - Installing and finding libjio (Journalled I/O library)
+Alien::Libjio - Utility package to install and locate libjio
 
 =head1 VERSION
 
-Version 1.0.2 ($Id: Libjio.pm 7812 2009-07-01 19:53:59Z FREQUENCY@cpan.org $)
+Version 1.0.3 ($Id: Libjio.pm 8231 2009-07-26 02:00:44Z FREQUENCY@cpan.org $)
 
 =cut
 
-use version; our $VERSION = qv('1.0.2');
+use version; our $VERSION = qv('1.0.3');
 
 =head1 DESCRIPTION
 
@@ -433,8 +427,6 @@ so.
 
 L<IO::Journal>, a Perl module that provides an interface to libjio.
 
-L<App::Info::Lib::Jio>, a package that gets information about libjio.
-
 L<http://blitiri.com.ar/p/libjio/>, Alberto Bertogli's page about libjio,
 which explains the purpose and features of libjio.
 
@@ -474,18 +466,22 @@ Another workaround is to disable taint checking, but that's not recommended.
 
 =head1 LICENSE
 
-Copyleft 2009 by Jonathan Yu <frequency@cpan.org>. All rights reversed.
+In a perfect world, I could just say that this package and all of the code
+it contains is Public Domain. It's a bit more complicated than that; you'll
+have to read the included F<LICENSE> file to get the full details.
 
-I, the copyright holder of this package, hereby release the entire contents
-therein into the public domain. This applies worldwide, to the extent that
-it is permissible by law.
+=head1 QUALITY ASSURANCE METRICS
 
-In case this is not legally possible, I grant any entity the right to use
-this work for any purpose, without any conditions, unless such conditions
-are required by law.
+=head2 TEST COVERAGE
 
-The full details of this can be found in the B<LICENSE> file included in
-this package.
+  ----------------------- ------ ------ ------ ------ ------ ------
+  File                     stmt   bran   cond   sub    pod   total
+  ----------------------- ------ ------ ------ ------ ------ ------
+  Alien/Libjio.pm         98.9   87.5   66.7   100.0  100.0  94.9
+
+Okay, granted, the coverage sucks -- generally, I aim for 100% in all of
+the categories, using fault injection to test all the code paths. Due to
+the nature of the module it's somewhat difficult to do.
 
 =head1 DISCLAIMER OF WARRANTY
 

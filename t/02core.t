@@ -3,16 +3,12 @@
 # t/02core.t
 #  Tests core functionality
 #
-# $Id: 02core.t 7813 2009-07-01 20:16:31Z FREQUENCY@cpan.org $
-#
-# This package and its contents are released by the author into the Public
-# Domain, to the full extent permissible by law. For additional information,
-# please see the included `LICENSE' file.
+# $Id: 02core.t 8229 2009-07-26 01:35:27Z FREQUENCY@cpan.org $
 
 use strict;
 use warnings;
 
-use Test::More tests => 10;
+use Test::More tests => 11;
 use Test::NoWarnings;
 
 use Alien::Libjio;
@@ -21,6 +17,7 @@ my $obj = Alien::Libjio->new;
 
 isa_ok($obj, 'Alien::Libjio', 'Create an Alien::Libjio instance');
 can_ok($obj, 'version');
+ok(defined $obj->version, 'Version is defined');
 
 # These sets of tests depend on whether libjio is installed
 SKIP: {
@@ -28,7 +25,7 @@ SKIP: {
 
   # If we got our config from pkg-config, do it again with ExtUtils::Liblist
   # so we can test that method too.
-  $obj->_try_liblist() if $obj->how eq 'ExtUtils::Liblist';
+  $obj->_try_liblist() if $obj->how eq 'pkg-config';
 
   # Now that we've done liblist, our method should be 'ExtUtils::Liblist'
   is($obj->method, 'ExtUtils::Liblist', 'Detection method is correct');
@@ -51,3 +48,7 @@ SKIP: {
   ok(!$obj->cflags, '->cflags is false');
   ok(!$obj->ldflags, '->ldflags is false');
 }
+
+# Make sure we try them in void context
+$obj->ldflags;
+$obj->cflags;

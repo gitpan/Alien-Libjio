@@ -3,13 +3,7 @@
 # t/00build.t
 #  Test that the build completed successfully
 #
-# By Jonathan Yu <frequency@cpan.org>, 2009. All rights reversed.
-#
-# $Id: 00build.t 7489 2009-06-13 03:28:44Z FREQUENCY@cpan.org $
-#
-# This package and its contents are released by the author into the Public
-# Domain, to the full extent permissible by law. For additional information,
-# please see the included `LICENSE' file.
+# $Id: 00build.t 8228 2009-07-26 00:55:52Z FREQUENCY@cpan.org $
 
 use strict;
 use warnings;
