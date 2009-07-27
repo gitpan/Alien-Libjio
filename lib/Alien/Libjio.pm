@@ -1,7 +1,7 @@
 # Alien::Libjio
 #  A Perl package to install libjio, a library for Journalled I/O.
 #
-# $Id: Libjio.pm 8231 2009-07-26 02:00:44Z FREQUENCY@cpan.org $
+# $Id: Libjio.pm 8251 2009-07-27 03:10:41Z FREQUENCY@cpan.org $
 
 package Alien::Libjio;
 
@@ -15,11 +15,11 @@ Alien::Libjio - Utility package to install and locate libjio
 
 =head1 VERSION
 
-Version 1.0.3 ($Id: Libjio.pm 8231 2009-07-26 02:00:44Z FREQUENCY@cpan.org $)
+Version 1.0.4 ($Id: Libjio.pm 8251 2009-07-27 03:10:41Z FREQUENCY@cpan.org $)
 
 =cut
 
-use version; our $VERSION = qv('1.0.3');
+use version; our $VERSION = qv('1.0.4');
 
 =head1 DESCRIPTION
 
