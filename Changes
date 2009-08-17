@@ -1,237 +1,55 @@
-2009-07-26  Jonathan Yu <frequency@cpan.org>
-
-	- Fix core tests to correct regression in version 1.0.3
-	- Bump version to 1.0.4
-
-2009-07-25  Jonathan Yu <frequency@cpan.org>
-
-	- Changed the method of probing @PATH for gmake, now we don't need to execute which
-	- Bumped version number to 1.0.3
-
-2009-07-25  Jonathan Yu <frequency@cpan.org>
-
-	Added (awful) coverage information.
-
-2009-07-25  Jonathan Yu <frequency@cpan.org>
-
-	- Added some commands so that the void context paths are touched (increases coverage a bit)
-
-2009-07-25  Jonathan Yu <frequency@cpan.org>
-
-	- Various POD updates
-	- Overhaul test scripts, remove author tests from Recommends (Alias' journal #5375)
-	- Update LICENSE and README (no longer generate a readme, just use a simple one)
-
-2009-07-01  Jonathan Yu <frequency@cpan.org>
-
-	Revert the change to 02core.t which makes Env::Sanctify::Auto necessary, and remove taint checking for that test
-
-2009-07-01  Jonathan Yu <frequency@cpan.org>
-
-	- Bumped Alien::Libjio version to 1.0.2
-	- Upgraded to new libjio 0.51 (released 2009-06-30)
-	- There are no Ruby bindings, so remove that from the Build.PL prompt asking if they should be installed
-
-2009-06-25  Jonathan Yu <frequency@cpan.org>
-
-	Added feature to use gmake if available, and warn the user if on a BSD machine and it is unavailable
-
-2009-06-25  Jonathan Yu <frequency@cpan.org>
-
-	Added detection for BSD-ish OSes, so that gmake is preferred if available
-
-2009-06-18  Jonathan Yu <frequency@cpan.org>
-
-	Bumped to version 1.0.1
-
-2009-06-14  Jonathan Yu <frequency@cpan.org>
-
-	No longer enforce "one dot only" in filenames. This breaks compatibility with OpenVMS.
-
-2009-06-14  Jonathan Yu <frequency@cpan.org>
-
-	Updated perlcriticrc with new preferences, removed "no critic" stuff for those in Alien/Libjio.pm
-
-2009-06-14  Jonathan Yu <frequency@cpan.org>
-
-	- Added limitation warnings
-	- Other minor documentation fixes
-
-2009-06-13  Jonathan Yu <frequency@cpan.org>
-
-	- A safer ENV{PATH}
-	- Don't do ExtUtils::Liblist twice in t/02core.t
-
-2009-06-12  Jonathan Yu <frequency@cpan.org>
-
-	Scalar context doesn't do what it usually does; we should consider returning a string containing all flags (join'd)...
-
-2009-06-12  Jonathan Yu <frequency@cpan.org>
-
-	Fix skipped test count
-
-2009-06-12  Jonathan Yu <frequency@cpan.org>
-
-	Added an example, more tests, updated MANIFEST
-
-2009-06-12  Jonathan Yu <frequency@cpan.org>
-
-	Added libjio compiled files to MANIFEST.SKIP
-
-2009-06-12  Jonathan Yu <frequency@cpan.org>
-
-	Skip 3 tests inside SKIP block
-
-2009-06-12  Jonathan Yu <frequency@cpan.org>
-
-	Added t/00build.t - I'm still not sure what's causing the Kwalitee test failures though
-
-2009-06-12  Jonathan Yu <frequency@cpan.org>
-
-	Added more stuff to make sure the module build successfully
-
-2009-06-12  Jonathan Yu <frequency@cpan.org>
-
-	- The version dependency can be reverted to 0.74
-	- Better detection with $ENV{MAKE} etc
-
-2009-06-12  Jonathan Yu <frequency@cpan.org>
-
-	Make sure we tried to build libjio before failing :-)
-
-2009-06-12  Jonathan Yu <frequency@cpan.org>
-
-	- Update README
-	- Added t/00build.t test to make sure the build process completed successfully, or fail otherwise (this way we can see which libjio instances fail to build from source, via CPAN Testers)
-
-2009-06-10  Jonathan Yu <frequency@cpan.org>
-
-	Changed the abstract
-
-2009-06-10  Jonathan Yu <frequency@cpan.org>
-
-2009-06-10  Jonathan Yu <frequency@cpan.org>
-
-	- Fixes to dependencies (Build.PL, META.yml)
-	- Added code to handle extra installs if people want (stuff like the Python/Ruby bindings, etc.) rather than just the core libjio stuff
-
-2009-06-09  Jonathan Yu <frequency@cpan.org>
-
-	Changed the defined() test to can()
-
-2009-06-09  Jonathan Yu <frequency@cpan.org>
-
-	Very minor variable name oops
-
-2009-06-09  Jonathan Yu <frequency@cpan.org>
-
-	Added a few more tests to improve coverage
-
-2009-06-09  Jonathan Yu <frequency@cpan.org>
-
-	Added some core tests. Reflected t/02core.t and t/03exceptions.t in MANIFEST
-
-2009-06-09  Jonathan Yu <frequency@cpan.org>
-
-	Added feature to check that ldflags and cflags croak when called as a class method
-
-2009-06-09  Jonathan Yu <frequency@cpan.org>
-
-	Add basic exception tests
-
-2009-06-09  Jonathan Yu <frequency@cpan.org>
-
-	- Silenced some nonsensical Perl::Critic warnings
-
-2009-06-09  Jonathan Yu <frequency@cpan.org>
-
-	Fixed minor issue making ->installed set to true unexpectedly (did not check both definedness and length of string)
-
-2009-06-09  Jonathan Yu <frequency@cpan.org>
-
-	- Removed the exception when libjio isn't found -- that's what ->installed is for
-
-2009-06-09  Jonathan Yu <frequency@cpan.org>
-
-	- Set 'installed' property to 0 by default, so that the test will return false
-
-2009-06-09  Jonathan Yu <frequency@cpan.org>
-
-	Added code to trap warnings emitted by ExtUtils::Liblist when libjio isn't found
-
-2009-06-09  Jonathan Yu <frequency@cpan.org>
-
-	- Fixed error checking code (open3 is strange to work with...)
-	- Make sure open3 children are reaped
-
-2009-06-09  Jonathan Yu <frequency@cpan.org>
-
-	- Added some error checking code
-
-2009-06-09  Jonathan Yu <frequency@cpan.org>
-
-	Unfortunately, it looks like ExtUtils::PkgConfig doesn't deal too well with errors.
-
-2009-06-09  Jonathan Yu <frequency@cpan.org>
-
-	Fixed minor oops
-
-2009-06-09  Jonathan Yu <frequency@cpan.org>
-
-	Added a subclass to install libjio
-
-2009-06-09  Jonathan Yu <frequency@cpan.org>
-
-	- Remember to 'use' ExtUtils::PkgConfig
-	- Add code to install libjio during Build.PL
-
-2009-06-09  Jonathan Yu <frequency@cpan.org>
-
-	Added a basic META.yml
-
-2009-06-09  Jonathan Yu <frequency@cpan.org>
-
-	- Suppress a warning from perlcritic
-	- Work with getconf using open3 rather than backticks
-
-2009-06-09  Jonathan Yu <frequency@cpan.org>
-
-	- Used ExtUtils::PkgConfig instead of doing stuff by hand
-
-2009-06-09  Jonathan Yu <frequency@cpan.org>
-
-	- Fixed name (IO::Journal -> Alien::Libjio)
-	- Updated MANIFEST with Perl::Critic stuff
-
-2009-06-09  Jonathan Yu <frequency@cpan.org>
-
-	Added Perl::Critic test
-
-2009-06-09  Jonathan Yu <frequency@cpan.org>
-
-	Updated MANIFEST
-
-2009-06-09  Jonathan Yu <frequency@cpan.org>
-
-	Added some basic tests
-
-2009-06-09  Jonathan Yu <frequency@cpan.org>
-
-	Minor oops fixes
-
-2009-06-09  Jonathan Yu <frequency@cpan.org>
-
-	- Added flag detection using Alien::Libjio
-	- Added accessor methods for ldflags & cflags
-
-2009-06-09  Jonathan Yu <frequency@cpan.org>
-
-	Initial commit :-)
-
-2009-06-09  Jonathan Yu <frequency@cpan.org>
-
-	Added Alien-Libjio directory
-
-;; Local Variables:
-;; coding: utf-8
-;; End:
+1.001 - 17 Aug 2009 - Jonathan Yu <frequency@cpan.org>
+
+  + Integrate version 0.90 of libjio
+  + Remove generated files from the repository
+  + Update MANIFEST.SKIP's paths so that libjio's Makefile
+    isn't skipped
+  + Move the version test inside the SKIP block -- doesn't
+    make sense to run it if it's not installed; this should
+    fix the CPAN Testers errors (thanks hobbs@freenode #perl)
+  + Use a simple string version, per David Golden's article:
+    http://www.dagolden.com/index.php/369/version-numbers-should-be-boring/
+  + No longer use Perl::Critic to test
+
+1.0.4 - 26 Jul 2009 - Jonathan Yu <frequency@cpan.org>
+
+  + Fix core tests to correct regression in version 1.0.3
+
+1.0.3 - 25 Jul 2009 - Jonathan Yu <frequency@cpan.org>
+
+  + Changed the method of probing @PATH for gmake, now we don't
+    need to execute which
+  + Added information about Test Coverage
+  + Added some commands so that the void context paths are touched
+    (increases coverage a bit)
+  + Update documentation
+  + Overhaul test scripts, remove author tests from Recommends
+    (Alias' journal #5375)
+  + Update LICENSE and README (no longer generate a readme, just
+    use a simple one)
+
+1.0.2 - 01 Jul 2009 - Jonathan Yu <frequency@cpan.org>
+
+  + New upstream release: libjio 0.51 (release 2009-06-30)
+  + Better detection with ENV{MAKE} (uses gmake if on BSD)
+  + There are no Ruby bindings, so remove that from the Build.PL
+    prompt asking if they should be installed
+
+1.0.1 - 18 Jun 2009 - Jonathan Yu <frequency@cpan.org>
+
+  + No longer enforce "one dot only" in filenames. This breaks
+    compatibility with OpenVMS.
+  + Updated perlcriticrc with new preferences, removed "no critic"
+    stuff for those in Alien/Libjio.pm
+  + Added limitation warnings
+  + Use a safer ENV{PATH}
+  + Don't do ExtUtils::Liblist twice in t/02core.t
+  + Revert dependency on version.pm to 0.74
+  + Try to find 'make' using ENV{MAKE}
+  + Update README
+  + Add t/00build.t to make sure build completes properly
+  + Changed abstract
+
+1.0 - 09 Jun 2009 - Jonathan Yu <frequency@cpan.org>
+
+  + Initial release

@@ -3,13 +3,13 @@
 # t/02core.t
 #  Tests core functionality
 #
-# $Id: 02core.t 8251 2009-07-27 03:10:41Z FREQUENCY@cpan.org $
+# $Id: 02core.t 8607 2009-08-17 21:23:44Z FREQUENCY@cpan.org $
 
 use strict;
 use warnings;
 
 use Test::More tests => 11;
-use Test::NoWarnings;
+use Test::NoWarnings; # 1 test
 
 use Alien::Libjio;
 
@@ -18,16 +18,9 @@ my $obj = Alien::Libjio->new;
 isa_ok($obj, 'Alien::Libjio', 'Create an Alien::Libjio instance');
 can_ok($obj, 'version');
 
-SKIP: {
-  skip('version is only returned by pkg-config', 1)
-    unless $obj->how eq 'pkg-config';
-
-  ok(defined $obj->version, 'Version is defined');
-};
-
 # These sets of tests depend on whether libjio is installed
 SKIP: {
-  skip('these tests require libjio to be installed first', 5)
+  skip('these tests require libjio to be installed first', 6)
     unless $obj->installed;
 
   # If we got our config from pkg-config, do it again with ExtUtils::Liblist
@@ -46,7 +39,14 @@ SKIP: {
   ok(scalar(@a) > 0, '->cflags returns a LIST');
   @a = $obj->ldflags;
   ok(scalar(@a) > 0, '->ldflags returns a LIST');
-};
+
+  SKIP: {
+    skip('version is only returned by pkg-config', 1)
+      unless $obj->how eq 'pkg-config';
+
+    ok(defined $obj->version, 'Version is defined');
+  }
+}
 
 # Make sure the returned values are false
 SKIP: {

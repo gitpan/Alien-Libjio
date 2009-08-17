@@ -3,7 +3,7 @@
 # Build.PL
 #  Script to build and install this distribution
 #
-# $Id: Build.PL 8231 2009-07-26 02:00:44Z FREQUENCY@cpan.org $
+# $Id: Build.PL 8600 2009-08-17 16:13:06Z FREQUENCY@cpan.org $
 
 use strict;
 use warnings;
@@ -32,7 +32,6 @@ my $builder = My::Builder->new(
 
     # Pragmatic and special modules
     'Carp'              => 1.04,
-    'version'           => 0,
     'warnings'          => 0,
     'strict'            => 0,
 

@@ -1,7 +1,7 @@
 # Alien::Libjio
 #  A Perl package to install libjio, a library for Journalled I/O.
 #
-# $Id: Libjio.pm 8251 2009-07-27 03:10:41Z FREQUENCY@cpan.org $
+# $Id: Libjio.pm 8606 2009-08-17 21:00:40Z FREQUENCY@cpan.org $
 
 package Alien::Libjio;
 
@@ -15,11 +15,12 @@ Alien::Libjio - Utility package to install and locate libjio
 
 =head1 VERSION
 
-Version 1.0.4 ($Id: Libjio.pm 8251 2009-07-27 03:10:41Z FREQUENCY@cpan.org $)
+Version 1.001 ($Id: Libjio.pm 8606 2009-08-17 21:00:40Z FREQUENCY@cpan.org $)
 
 =cut
 
-use version; our $VERSION = qv('1.0.4');
+our $VERSION = '1.001';
+$VERSION = eval $VERSION;
 
 =head1 DESCRIPTION
 
@@ -276,10 +277,11 @@ sub _try_pkg_config {
   my ($self) = @_;
 
   my ($value, $err) = _get_pc('cflags');
-  if (defined $err && length $err) {
-    #warn "Problem with pkg-config; using ExtUtils::Liblist instead\n";
-    return;
-  }
+  return unless (defined $value && length $value);
+  #if (defined $err && length $err) {
+  #  #warn "Problem with pkg-config; using ExtUtils::Liblist instead\n";
+  #  return;
+  #}
 
   $self->{installed} = 1;
   $self->{method} = 'pkg-config';
@@ -477,7 +479,7 @@ have to read the included F<LICENSE> file to get the full details.
   ----------------------- ------ ------ ------ ------ ------ ------
   File                     stmt   bran   cond   sub    pod   total
   ----------------------- ------ ------ ------ ------ ------ ------
-  Alien/Libjio.pm         98.9   87.5   66.7   100.0  100.0  94.9
+  Alien/Libjio.pm         97.7   84.4   66.7   100.0  100.0  93.4
 
 Okay, granted, the coverage sucks -- generally, I aim for 100% in all of
 the categories, using fault injection to test all the code paths. Due to

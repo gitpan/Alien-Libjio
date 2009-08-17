@@ -3,13 +3,13 @@
 # t/00build.t
 #  Test that the build completed successfully
 #
-# $Id: 00build.t 8228 2009-07-26 00:55:52Z FREQUENCY@cpan.org $
+# $Id: 00build.t 8607 2009-08-17 21:23:44Z FREQUENCY@cpan.org $
 
 use strict;
 use warnings;
 
 use Test::More tests => 4;
-use Test::NoWarnings;
+use Test::NoWarnings; # 1 test
 
 use Module::Build;
 my $builder = Module::Build->current;

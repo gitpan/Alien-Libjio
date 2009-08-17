@@ -3,13 +3,13 @@
 # t/03exceptions.t
 #  Tests fast errors produced with obvious mistakes
 #
-# $Id: 03exceptions.t 8228 2009-07-26 00:55:52Z FREQUENCY@cpan.org $
+# $Id: 03exceptions.t 8607 2009-08-17 21:23:44Z FREQUENCY@cpan.org $
 
 use strict;
 use warnings;
 
 use Test::More tests => 6;
-use Test::NoWarnings;
+use Test::NoWarnings; # 1 test
 
 use Alien::Libjio;
 
