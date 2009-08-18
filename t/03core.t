@@ -1,9 +1,9 @@
 #!/usr/bin/perl
 
-# t/02core.t
+# t/03core.t
 #  Tests core functionality
 #
-# $Id: 02core.t 8607 2009-08-17 21:23:44Z FREQUENCY@cpan.org $
+# $Id: 03core.t 8615 2009-08-18 03:24:15Z FREQUENCY@cpan.org $
 
 use strict;
 use warnings;

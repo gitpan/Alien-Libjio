@@ -1,9 +1,9 @@
 #!/usr/bin/perl -T
 
-# t/01pod-coverage.t
-#  Ensures all subroutines are documented with POD
+# t/97pod.t
+#  Checks that POD commands are correct
 #
-# $Id: 01pod-coverage.t 8228 2009-07-26 00:55:52Z FREQUENCY@cpan.org $
+# $Id: 97pod.t 8615 2009-08-18 03:24:15Z FREQUENCY@cpan.org $
 
 use strict;
 use warnings;
@@ -15,12 +15,13 @@ unless ($ENV{AUTOMATED_TESTING} or $ENV{RELEASE_TESTING}) {
 }
 
 my %MODULES = (
-  'Test::Pod::Coverage' => 1.04,
+  'Test::Pod'     => 1.26,
+  'Pod::Simple'   => 3.07,
 );
 
 # Module::CPANTS::Kwalitee won't detect that we're using test modules as
 # author tests, so we convince it that we're loading it in the normal way.
-0 and require Test::Pod::Coverage;
+0 and require Test::Pod;
 
 while (my ($module, $version) = each %MODULES) {
   eval "use $module $version";
@@ -34,4 +35,4 @@ while (my ($module, $version) = each %MODULES) {
   }
 }
 
-all_pod_coverage_ok();
+all_pod_files_ok();

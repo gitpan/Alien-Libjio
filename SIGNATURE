@@ -14,17 +14,17 @@ not run its Makefile.PL or Build.PL.
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-SHA1 1b5431b236f8eabd4c9bd94cb17bdbc5303c899b Build.PL
-SHA1 a4def2c2bc93d4b00a36f065aa6dbbb917a04d39 Changes
+SHA1 bc6cf8868668e77d87bd7669080dc248f47214de Build.PL
+SHA1 581cda3ca6620bcfe91b9ecd386633f15fbb36f2 Changes
 SHA1 3c552e094c748c3d2c5444eeaeb772ea35584a0d LICENSE
-SHA1 dde7b4f7a6ded92439002211fbef7eb12c82daec MANIFEST
-SHA1 8c7c0e750e1ff699a67580d94734816598d4b1b6 MANIFEST.SKIP
-SHA1 6eafa98ee8be072c32ca9f0a08603b99df422729 META.yml
+SHA1 a5ee47297c9ad05a7aa366faa6c1da8e27d72113 MANIFEST
+SHA1 0062c3e239b8507471b7474925ee779e6cfbefe8 MANIFEST.SKIP
+SHA1 2c5ff40bcd551417e41f8c2562d189ed4b71e030 META.yml
 SHA1 2738ad9a21b0be9d3d025983f2647f041763162f Makefile.PL
-SHA1 fefd20cf20f1d3bf50d46b23679e1dd4b12aafc7 README
+SHA1 2b16e98ef4ed9cdcd71f47caba4fab4d031d6133 README
 SHA1 bc906d1bc284b48e2a3235bcf6c08648b4f72305 examples/libjio-config
-SHA1 6e74666b63101e3549fbb7a0d1cf4bd478d55f33 inc/My/Builder.pm
-SHA1 1a5312e906a8f483845b7b8a9757b955fc696ac1 lib/Alien/Libjio.pm
+SHA1 20ee1eec2c0d0f81b7618f4af6701229f193a2bf inc/My/Builder.pm
+SHA1 a7658f935358a4c612afa0c341673467f91e07be lib/Alien/Libjio.pm
 SHA1 17c0f97e24232bfe41ba97e8f542738fd5d3f336 libjio/INSTALL
 SHA1 2f593cf68fa5662e89bbd52376c8ea218500477e libjio/LICENSE
 SHA1 9648150cac70c22b67b82a6e046cb8078d40ee70 libjio/Makefile
@@ -41,7 +41,6 @@ SHA1 75365431cfb3d33786d145cb393a1cc7b8eff264 libjio/doc/tids.rst
 SHA1 fad22fc47930ed8081e395219370d9eb7bcb84db libjio/libjio/Makefile
 SHA1 3a5296992daf912de7d011c2064de9e4e41520a1 libjio/libjio/ansi.c
 SHA1 855695a4c06e23c5d00f82a72a26e8d2c2da0359 libjio/libjio/autosync.c
-SHA1 61cea1e0e30b2c5cf4dacf8c20804dd825628693 libjio/libjio/build-flags
 SHA1 59e2c23d5396689ca737c87e59e303f8d3b73116 libjio/libjio/check.c
 SHA1 2c780cee352b52170aa03966749f107be0ae916b libjio/libjio/checksum.c
 SHA1 8048364b1babb89d3e1474a4dd0110cb9f56040f libjio/libjio/common.c
@@ -60,7 +59,6 @@ SHA1 0b1ce4da248d24b846c31f5ec6b89976fda92e6d libjio/libjio/journal.h
 SHA1 cb3b603ec585a18efb503ab2ed6b688f2a427d65 libjio/libjio/libjio.3
 SHA1 c612741aeac5eb546ce9cd806ed3fed39f61d910 libjio/libjio/libjio.h
 SHA1 a126ac0c77640de6897bfb1ba821b3f4532a3543 libjio/libjio/libjio.pc.in
-SHA1 47908c77a113e14ebb659353c136d0faf2109f77 libjio/libjio/libjio.so.0.90
 SHA1 c680dffbc7a8941285741b5080b2f4d991028c8d libjio/libjio/trans.c
 SHA1 5bbb814d4f2c5f6d95adfd8fca2fc0e705eb1e42 libjio/libjio/trans.h
 SHA1 20e2179243741f20d87b6b6d5890040c42e0e656 libjio/libjio/unix.c
@@ -79,22 +77,22 @@ SHA1 0a41769d7bb17bd13f493ebfa966406026f8dcc5 libjio/tests/performance/Makefile
 SHA1 b27ef8009ed1aab87a5722383adf0bdc034b394e libjio/tests/performance/performance.c
 SHA1 4acde6a0a88345ddac46b16a51e21d57c877a770 libjio/tests/performance/random.c
 SHA1 c00e4e8a1cff588da5a3314e23a0bacd4601e94c libjio/tests/stress/jiostress
-SHA1 f5880586dad95db1a9d56c47787abeba579b3d2b t/00build.t
 SHA1 ba6902b6fadb90b4aa36d2b61aa319a8349bd4dd t/00signature.t
-SHA1 399d8ccf93bd65d5453742fc978d9bf88b9e730b t/01compile.t
-SHA1 5eb229bbdef16009ad2dd5bf7d3dec2f254f9cc9 t/01kwalitee.t
+SHA1 1043543d309b83e9a9bfe2ed3f9ef171b98ce6e7 t/01build.t
 SHA1 0eeda220a1032e0404061fec4de23632af26dd0e t/01manifest.t
-SHA1 71ddea9077e1ddb098faff6eb3206631e1e176d7 t/01meta.t
-SHA1 971c2395615df196765d1c74b8783f86574834dc t/01min-perl.t
-SHA1 89fe66f8430a023e0a15407373c4dcc4e8a76b24 t/01pod-coverage.t
-SHA1 450ace3d9acacfd3256ce16629d76e49b64cdd78 t/01pod.t
-SHA1 deec6310042be139ece011db5ccbae4355ef486d t/01portability.t
-SHA1 58dd59fccb5768a955f328496c3adaeab626f371 t/02core.t
+SHA1 4065feeb78f9468065e629fa20ea81c121e5b17f t/02compile.t
+SHA1 9e9c3291f05dcf701fbb67319a438f1728607337 t/03core.t
 SHA1 5e6190878fcd2b3b8a73b7cbe7fe5e0c074828be t/03exceptions.t
+SHA1 72e5534cb643288539dd0bdcccaedc63e348e98e t/97pod.t
+SHA1 22876cbcc813fcc46d21caebad756290012438f5 t/98pod-coverage.t
+SHA1 9b9587c3a1eda46f2ec0fd530e572517fb9aba23 t/99kwalitee.t
+SHA1 ba59acea46da12e4c88385f18c45963d718c9ef3 t/99meta.t
+SHA1 e456864577079119d365c5285fbd40daea91d3f3 t/99min-perl.t
+SHA1 7e0864b4940116b5db5bf9c64638dcdf40f07e47 t/99portability.t
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.9 (GNU/Linux)
 
-iEYEARECAAYFAkqJqqIACgkQYYN9T93mai8u0ACgo+6Jc7AVs/tCfEYUoJIPZffw
-q6cAmwfIzmlcEy97+HV/0GpMTKbXNmeg
-=nKlC
+iEYEARECAAYFAkqKmowACgkQYYN9T93mai+soACfS4e3E6FFby4owpg2kF9AZz9g
+kggAn3vfOWdZQ/2QL23Rosi1TQlpX36m
+=5DEc
 -----END PGP SIGNATURE-----

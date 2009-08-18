@@ -1,9 +1,9 @@
 #!/usr/bin/perl -T
 
-# t/01compile.t
+# t/02compile.t
 #  Check that the module can be compiled and loaded properly.
 #
-# $Id: 01compile.t 8228 2009-07-26 00:55:52Z FREQUENCY@cpan.org $
+# $Id: 02compile.t 8615 2009-08-18 03:24:15Z FREQUENCY@cpan.org $
 
 use strict;
 use warnings;

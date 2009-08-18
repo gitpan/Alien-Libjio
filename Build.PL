@@ -3,7 +3,7 @@
 # Build.PL
 #  Script to build and install this distribution
 #
-# $Id: Build.PL 8600 2009-08-17 16:13:06Z FREQUENCY@cpan.org $
+# $Id: Build.PL 8631 2009-08-18 15:57:44Z FREQUENCY@cpan.org $
 
 use strict;
 use warnings;
@@ -29,17 +29,6 @@ my $builder = My::Builder->new(
 
   requires => {
     'perl'              => 5.006,
-
-    # Pragmatic and special modules
-    'Carp'              => 1.04,
-    'warnings'          => 0,
-    'strict'            => 0,
-
-    # Utilities to find compile information
-    'ExtUtils::Liblist'       => 0,
-    'IPC::Open3'              => 0,
-    'Cwd'                     => 0,
-    'File::Spec'              => 0,
   },
   build_requires => {
     # User tests for good functionality

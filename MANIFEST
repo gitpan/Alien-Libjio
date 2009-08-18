@@ -14,7 +14,6 @@ libjio/doc/tids.rst
 libjio/INSTALL
 libjio/libjio/ansi.c
 libjio/libjio/autosync.c
-libjio/libjio/build-flags
 libjio/libjio/check.c
 libjio/libjio/checksum.c
 libjio/libjio/common.c
@@ -33,7 +32,6 @@ libjio/libjio/journal.h
 libjio/libjio/libjio.3
 libjio/libjio/libjio.h
 libjio/libjio/libjio.pc.in
-libjio/libjio/libjio.so.0.90
 libjio/libjio/Makefile
 libjio/libjio/trans.c
 libjio/libjio/trans.h
@@ -61,18 +59,18 @@ LICENSE
 MANIFEST			This list of files
 MANIFEST.SKIP
 README
-t/00build.t
 t/00signature.t
-t/01compile.t
-t/01kwalitee.t
+t/01build.t
 t/01manifest.t
-t/01meta.t
-t/01min-perl.t
-t/01pod-coverage.t
-t/01pod.t
-t/01portability.t
-t/02core.t
+t/02compile.t
+t/03core.t
 t/03exceptions.t
+t/97pod.t
+t/98pod-coverage.t
+t/99kwalitee.t
+t/99meta.t
+t/99min-perl.t
+t/99portability.t
 Makefile.PL
 META.yml
 SIGNATURE    Added here by Module::Build

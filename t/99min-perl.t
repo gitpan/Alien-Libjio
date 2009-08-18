@@ -1,9 +1,9 @@
 #!/usr/bin/perl
 
-# t/01min-perl.t
+# t/99min-perl.t
 #  Tests that the minimum required Perl version matches META.yml
 #
-# $Id: 01min-perl.t 8228 2009-07-26 00:55:52Z FREQUENCY@cpan.org $
+# $Id: 99min-perl.t 8615 2009-08-18 03:24:15Z FREQUENCY@cpan.org $
 
 use strict;
 use warnings;

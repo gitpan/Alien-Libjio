@@ -1,4 +1,4 @@
-$Id: README 8601 2009-08-17 19:40:17Z FREQUENCY@cpan.org $
+$Id: README 8623 2009-08-18 04:58:57Z FREQUENCY@cpan.org $
 
 Alien::Libjio is a utility package to install and locate libjio
 
@@ -23,7 +23,7 @@ USAGE AND DOCUMENTATION
   installed, you can read that using:
   $ perldoc Alien::Libjio
 
-COPYRIGHT AND LICENCE
+LICENSE
 
   In a perfect world, I could just say that this package and all of the
   code it contains is Public Domain. It's a bit more complicated than
