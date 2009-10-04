@@ -3,7 +3,7 @@
 # Build.PL
 #  Script to build and install this distribution
 #
-# $Id: Build.PL 8631 2009-08-18 15:57:44Z FREQUENCY@cpan.org $
+# $Id: Build.PL 9520 2009-10-04 03:58:25Z FREQUENCY@cpan.org $
 
 use strict;
 use warnings;
@@ -16,7 +16,7 @@ use Env '@PATH';
 my $builder = My::Builder->new(
   module_name           => 'Alien::Libjio',
   license               => 'unrestricted',
-  dist_author           => 'Jonathan Yu <frequency@cpan.org>',
+  dist_author           => 'Jonathan Yu <jawnsy@cpan.org>',
   dist_version_from     => 'lib/Alien/Libjio.pm',
   dynamic_config        => 1,
   create_readme         => 0,

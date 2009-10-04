@@ -1,8 +1,8 @@
-$Id: README 8623 2009-08-18 04:58:57Z FREQUENCY@cpan.org $
+$Id: README 9522 2009-10-04 04:03:08Z FREQUENCY@cpan.org $
 
 Alien::Libjio is a utility package to install and locate libjio
 
-Copyright 2009 by Jonathan Yu <frequency@cpan.org>. All rights reserved.
+Copyright 2009 by Jonathan Yu <jawnsy@cpan.org>. All rights reserved.
 
 INSTALLATION
 

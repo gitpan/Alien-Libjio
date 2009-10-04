@@ -1,7 +1,7 @@
 # My::Builder
 #  A local Module::Build subclass for installing libjio
 #
-# $Id: Builder.pm 8633 2009-08-18 16:00:58Z FREQUENCY@cpan.org $
+# $Id: Builder.pm 8670 2009-08-20 02:38:50Z FREQUENCY@cpan.org $
 
 package My::Builder;
 
@@ -10,17 +10,15 @@ use warnings;
 
 use base 'Module::Build';
 
-use Config '%Config';
-
 use Cwd ();
-use File::Spec ();
 use Carp ();
 
 my $ORIG_DIR = Cwd::cwd();
 
 # These are utility commands for getting into and out of our build directory
 sub _chdir_or_die {
-  my ($dir) = @_;
+  use File::Spec ();
+  my $dir = File::Spec->catfile(@_);
   chdir $dir or Carp::croak("Failed to chdir to $dir: $!");
 }
 sub _chdir_back {
@@ -38,7 +36,7 @@ sub ACTION_code {
       _chdir_or_die('libjio');
     }
     else {
-      _chdir_or_die(File::Spec->catfile('libjio', 'libjio'));
+      _chdir_or_die('libjio', 'libjio');
     }
 
     # Run the make system to do the rest, but save the return code
@@ -64,7 +62,7 @@ sub ACTION_install {
       _chdir_or_die('libjio');
     }
     else {
-      _chdir_or_die(File::Spec->catfile('libjio', 'libjio'));
+      _chdir_or_die('libjio', 'libjio');
     }
 
     # Run the make system to do the rest

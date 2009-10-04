@@ -7,6 +7,7 @@ libjio/bindings/preload/libjio_preload.c
 libjio/bindings/preload/Makefile
 libjio/bindings/python/libjio.c
 libjio/bindings/python/setup.py
+libjio/doc/assumptions
 libjio/doc/guide.rst
 libjio/doc/libjio.rst
 libjio/doc/source_layout
@@ -53,6 +54,7 @@ libjio/tests/behaviour/tf.py
 libjio/tests/performance/Makefile
 libjio/tests/performance/performance.c
 libjio/tests/performance/random.c
+libjio/tests/README
 libjio/tests/stress/jiostress
 libjio/UPGRADING
 LICENSE

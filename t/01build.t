@@ -3,7 +3,7 @@
 # t/01build.t
 #  Test that the build completed successfully
 #
-# $Id: 01build.t 8615 2009-08-18 03:24:15Z FREQUENCY@cpan.org $
+# $Id: 01build.t 9517 2009-10-04 02:02:10Z FREQUENCY@cpan.org $
 
 use strict;
 use warnings;
@@ -21,8 +21,8 @@ SKIP: {
 
   is($builder->notes('build_result'), 0, 'Return code from make is zero ' .
     '(ie, build completed successfully)');
-  ok(-e File::Spec->catfile('libjio', 'libjio', 'libjio.so'), 'Compiled ' .
-    'libjio.so file exists on disk');
-  ok(-e File::Spec->catfile('libjio', 'libjio', 'libjio.a'), 'Compiled ' .
-    'libjio.a file exists on disk');
+  ok(-e File::Spec->catfile('libjio', 'libjio', 'build', 'libjio.so'),
+    'Compiled libjio.so file exists on disk');
+  ok(-e File::Spec->catfile('libjio', 'libjio', 'build', 'libjio.a'),
+    'Compiled libjio.a file exists on disk');
 }
