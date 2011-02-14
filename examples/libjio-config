@@ -1,13 +1,6 @@
 #!/usr/bin/perl -T
 
-# examples/libjio-config
-#  Shows some information about libjio
-#
-# $Id: libjio-config 7492 2009-06-13 03:45:10Z FREQUENCY@cpan.org $
-#
-# All rights to this test script are hereby disclaimed and its contents
-# released into the public domain by the author. Where this is not possible,
-# you may use this file under the same terms as Perl itself.
+# Shows some information about libjio
 
 use strict;
 use warnings;

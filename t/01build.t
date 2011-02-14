@@ -1,9 +1,6 @@
 #!/usr/bin/perl
 
-# t/01build.t
-#  Test that the build completed successfully
-#
-# $Id: 01build.t 9517 2009-10-04 02:02:10Z FREQUENCY@cpan.org $
+# Test that the build completed successfully
 
 use strict;
 use warnings;

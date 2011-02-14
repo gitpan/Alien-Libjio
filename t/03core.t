@@ -1,9 +1,6 @@
 #!/usr/bin/perl
 
-# t/03core.t
-#  Tests core functionality
-#
-# $Id: 03core.t 8615 2009-08-18 03:24:15Z FREQUENCY@cpan.org $
+# Tests core functionality
 
 use strict;
 use warnings;

@@ -1,9 +1,6 @@
 #!/usr/bin/perl -T
 
-# t/02compile.t
-#  Check that the module can be compiled and loaded properly.
-#
-# $Id: 02compile.t 8615 2009-08-18 03:24:15Z FREQUENCY@cpan.org $
+# Check that the module can be compiled and loaded properly.
 
 use strict;
 use warnings;

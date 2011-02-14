@@ -1,7 +1,7 @@
 # My::Builder
 #  A local Module::Build subclass for installing libjio
 #
-# $Id: Builder.pm 8670 2009-08-20 02:38:50Z FREQUENCY@cpan.org $
+# $Id$
 
 package My::Builder;
 
